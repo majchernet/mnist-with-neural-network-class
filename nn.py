@@ -59,15 +59,14 @@ class NN:
     #return string with info about nn
     def info(self):
         info = "This is neural network object with nodes in layers\n"
+        
+        info += "Input layer: {} nodes\n".format(self.inLayer)
+        
+        for idx, val in enumerate(self.hiddenLayers):
+            info += "Hidden layer [{}]: {} nodes\n".format(idx+1, val)
+            
+        info += "Output layer: {} nodes\n".format(self.outLayer)
 
-        #for idx, val in enumerate(self.layers):
-        #   info += "L{}: {}".format(idx, val)
-        #  if idx == 0:
-        #     info += "\t<-input layer\n"
-        #elif idx+1 == len(self.layers):
-        #   info += "\t<-output layer\n"  
-        #else:
-        #   info += "\n"
         return info
 
     # train nn with batch of data
