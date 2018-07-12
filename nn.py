@@ -56,18 +56,18 @@ class NN:
         self.sess = tf.InteractiveSession()
         tf.global_variables_initializer().run()
 
+
     #return string with info about nn
     def info(self):
-        info = "This is neural network object with nodes in layers\n"
-        
+        info = "This is neural network object with nodes in layers\n"        
         info += "Input layer: {} nodes\n".format(self.inLayer)
         
         for idx, val in enumerate(self.hiddenLayers):
             info += "Hidden layer [{}]: {} nodes\n".format(idx+1, val)
             
         info += "Output layer: {} nodes\n".format(self.outLayer)
-
         return info
+
 
     # train nn with batch of data
     def train(self, batchX, batchY):
