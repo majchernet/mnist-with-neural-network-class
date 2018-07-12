@@ -6,6 +6,7 @@ from nn import NN
 
 # define model (nodes in each layer)
 nn = NN([784,380,160,80,40,20,10])
+print ("{}".format(nn.info()))
 
 # Download images and labels
 mnist = read_data_sets("MNISTdata", one_hot=True, reshape=False, validation_size=0)
